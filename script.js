@@ -25,7 +25,7 @@ function generate() {
         input.substring(input.indexOf(" ") + 1, input.lastIndexOf(" "));
       break;
     case "4":
-      if (input.endsWith(".jpg") || input.endsWith) {
+      if (input.endsWith(".jpg")) {
         output.textContent = "it's a .jpg";
       } else if (input.endsWith(".png")) {
         output.textContent = "it's a .png";
@@ -49,15 +49,12 @@ function generate() {
       array.forEach(upperCase);
       function upperCase(word) {
         word = word.charAt(0).toUpperCase() + word.substring(1).toLowerCase();
-        console.log(word);
         temp = temp + " " + word;
       }
-      console.log(temp);
       let array2 = temp.split("-");
       array2.slice(1).forEach(upperCase2);
       function upperCase2(word) {
         word = word.charAt(0).toUpperCase() + word.substring(1);
-        console.log(word);
         temp2 = temp2 + "-" + word;
       }
       output.textContent = array2[0] + temp2;
